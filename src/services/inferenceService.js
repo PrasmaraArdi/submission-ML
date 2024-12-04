@@ -1,6 +1,6 @@
 const tf = require('@tensorflow/tfjs-node');
 const InputError = require('../exceptions/InputError');
-async function binaryClassification(model, image) {
+async function binaryKlasifikasi1(model, image) {
     try {
         const tensor = tf.node
             .decodeJpeg(image)
@@ -23,4 +23,4 @@ async function binaryClassification(model, image) {
         throw new InputError('Terjadi kesalahan dalam melakukan prediksi');
     }
 }
-module.exports = binaryClassification;
+module.exports = binaryKlasifikasi1;
